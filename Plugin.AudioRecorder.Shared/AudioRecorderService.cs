@@ -82,6 +82,16 @@ namespace Plugin.AudioRecorder
 		/// <remarks>This event will be raised on a background thread to allow for any further processing needed.  The audio file will be <c>null</c> in the case that no audio was recorded.</remarks>
 		public event EventHandler<string> AudioInputReceived;
 
+		/// <summary>
+		/// Gets current audio level
+		/// </summary>
+		public float AudioLevel { get; private set; }
+
+		/// <summary>
+		/// This event is raised when audio level is changed.
+		/// </summary>
+		public event EventHandler<float> AudioLevelChanged;
+
 		partial void Init ();
 
 		/// <summary>
@@ -145,6 +155,13 @@ namespace Plugin.AudioRecorder
 		void AudioStream_OnBroadcast (object sender, byte [] bytes)
 		{
 			var level = AudioFunctions.CalculateLevel (bytes);
+
+			if (Math.Abs(AudioLevel - level) > 0)
+			{
+				AudioLevelChanged?.Invoke(this, level);
+			}
+
+			AudioLevel = level;
 
 			if (level < NearZero && !audioDetected) // discard any initial 0s so we don't jump the gun on timing out
 			{

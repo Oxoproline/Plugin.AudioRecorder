@@ -49,7 +49,6 @@
       <Project>{818D32EE-A561-4629-ACEA-94871C20D4A8}</Project>
       <Name>Plugin.AudioRecorder.iOS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Plugin.AudioRecorder.UWP\Plugin.AudioRecorder.UWP.csproj" />
     <ProjectReference Include="..\Plugin.AudioRecorder\Plugin.AudioRecorder.csproj">
       <Project>{E539C217-D04B-49A7-B4DB-80B277FB2210}</Project>
       <Name>Plugin.AudioRecorder</Name>
@@ -57,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.5-dev.1</Version>
+      <Version>0.2.0</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>

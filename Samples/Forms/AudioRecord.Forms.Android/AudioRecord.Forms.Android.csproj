@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -117,7 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AudioRecord.Forms\AudioRecord.Forms.csproj">
-      <Project>{64696B44-CFA0-4320-B53F-CD539D3BA5AE}</Project>
+      <Project>{74BD10E3-1652-45C3-B16F-A6FFDD0D2AB5}</Project>
       <Name>AudioRecord.Forms</Name>
     </ProjectReference>
   </ItemGroup>
